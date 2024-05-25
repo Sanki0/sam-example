@@ -1,0 +1,18 @@
+input Input {
+    id: String!
+    name: String!
+}
+
+type Mutation {
+    create(input: Input!): String
+    presignUrl: String
+}
+
+type Query {
+    get(id: String!): String
+}
+
+schema {
+    query: Query
+    mutation: Mutation
+}
